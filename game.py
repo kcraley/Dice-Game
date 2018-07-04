@@ -1,12 +1,13 @@
 """
-A based Game object
+A base Game object
 
-This game object is used to 
+This game object is used to manage the logic and state of
+the game
 """
 
 class Game:
     """
-
+    The Game object that will manage the state of the game
     """
 
     def __init__(self):
