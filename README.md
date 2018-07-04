@@ -5,7 +5,7 @@ A simple dice guessing game
 
 ## About
 
-In this game, the user will guess a number from one to 6.  A dice will roll and the user's guess will be compared.  Can you last up to three strikes?
+In this game, the user will guess a number from one to six.  A dice will roll and the user's guess will be compared.  Can you last up to three strikes?
 
 ### Rules
 
