@@ -69,6 +69,7 @@ class Game:
             play_again = str(raw_input("Would you like to play again? [Y|N]: "))
             print
             if (play_again == "Y") or (play_again == "y"):
+                user.reset_player()
                 return True
             elif (play_again == "N") or (play_again == "n"):
                 return False
