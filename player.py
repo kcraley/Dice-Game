@@ -67,8 +67,6 @@ class Player:
             self._strikes += strikes
             print "Incorrect guess. You have " + str(self.get_strikes()) + " strikes!"
             print
-        else:
-            return "Please enter a positive number."
 
     def remove_strikes(self, strikes):
         """
@@ -78,8 +76,6 @@ class Player:
             self._strikes -= strikes
             print "You guessed correctly. You have " + str(self.get_strikes()) + " strikes!"
             print
-        else:
-            return "Please enter a positive number."
     
     def add_points(self, new_points):
         """
@@ -87,8 +83,6 @@ class Player:
         """
         if self.validate_integer(new_points):
             self._score += new_points
-        else:
-            return "Please enter a positive number."
 
     def remove_points(self, new_points):
         """
@@ -96,8 +90,6 @@ class Player:
         """
         if self.validate_integer(new_points):
             self._score -= new_points
-        else:
-            return "Please enter a positive number."
 
     def validate_integer(self, new_points):
         """
@@ -106,6 +98,7 @@ class Player:
         if (int(new_points) > 0):
             return True
         else:
+            print "Please enter a positive number."
             return False
 
     def reset_player(self):
