@@ -64,8 +64,8 @@ class Game:
             return True
 
     def play_again(self, user):
+        print "Game Over!"
         while True:
-            print "Game Over!"
             play_again = str(raw_input("Would you like to play again? [Y|N]: "))
             print
             if (play_again == "Y") or (play_again == "y"):
