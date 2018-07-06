@@ -23,7 +23,7 @@ def main():
     user = Player(first_name, last_name)
 
     # Prompt Player with instructions
-    dice_game.welcome_prompt(user)
+    dice_game.welcome_prompt(user.get_whole_name())
 
     # Main game loop
     play_again = True

@@ -77,13 +77,13 @@ class Game:
             else:
                 print "Invalid selection. Try again."
 
-    def welcome_prompt(self, user):
+    def welcome_prompt(self, whole_name):
         """
         Show the player the welcome prompt
         """
         print "Dice Game"
         print "*********"
-        print "Welcome " + user.get_whole_name() + "!"
+        print "Welcome " + str(whole_name) + "!"
         print "You must guess what number the computer is going to roll."
         print "If you guess correctly, you win the game. Otherwise, if"
         print "you guess incorrectly, a strike is given and you can"
