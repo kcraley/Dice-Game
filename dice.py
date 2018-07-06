@@ -15,22 +15,32 @@ def main():
     from player import Player
     from game import Game
 
+    # Instantiate game
     dice_game = Game()
 
+    # Get Player's name and instantiate
     first_name, last_name = dice_game.prompt_user_name()
     user = Player(first_name, last_name)
 
+    # Prompt Player with instructions
     dice_game.welcome_prompt(user)
 
+    # Main game loop
     play_again = True
     while play_again:
+        # Obtain the Player guess
         guess = dice_game.get_user_guess()
+
+        # Roll the dice
         dice_roll = dice_game.roll_dice()
 
+        # Verify guesses from the user
         if guess != dice_roll:
             user.add_strikes(1)
         elif guess == dice_roll:
             user.remove_strikes(1)
+
+        # Play again if the Player gets 3 or more strikes?
         if user.get_strikes() >= 3:
             play_again = dice_game.play_again(user)
 
