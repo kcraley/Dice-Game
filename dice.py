@@ -42,7 +42,8 @@ def main():
 
         # Play again if the Player gets 3 or more strikes?
         if user.get_strikes() >= 3:
-            play_again = dice_game.play_again(user)
+            user.reset_player()
+            play_again = dice_game.play_again()
 
 if __name__ == '__main__':
     main()
