@@ -51,6 +51,7 @@ def main():
             correct += 1
             if correct >= 2:
                 user.remove_strikes(2)
+                user.add_points(int(25 + (25 * 0.5 + correct)))
             else:
                 user.remove_strikes(1)
                 user.add_points(25)
