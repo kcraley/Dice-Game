@@ -32,7 +32,8 @@ def main():
     # Declare global variables
     round_number = 1
     play_again = True
-    
+    correct = 0
+
     # Main game loop
     while play_again:
         # Obtain the Player guess
@@ -45,10 +46,14 @@ def main():
         # Verify guesses from the user
         if guess != dice_roll:
             user.add_strikes(1)
+            correct = 0
         elif guess == dice_roll:
-            if 
-            user.remove_strikes(1)
-            user.add_points(25)
+            correct += 1
+            if correct >= 2:
+                user.remove_strikes(2)
+            else:
+                user.remove_strikes(1)
+                user.add_points(25)
 
         # Play again if the Player gets 3 or more strikes?
         if user.get_strikes() >= 3:
