@@ -29,9 +29,11 @@ def main():
     # Prompt Player with instructions
     dice_game.welcome_prompt(user.get_whole_name())
 
-    # Main game loop
+    # Declare global variables
     round_number = 1
     play_again = True
+    
+    # Main game loop
     while play_again:
         # Obtain the Player guess
         guess = dice_game.get_user_guess()
@@ -44,6 +46,7 @@ def main():
         if guess != dice_roll:
             user.add_strikes(1)
         elif guess == dice_roll:
+            if 
             user.remove_strikes(1)
             user.add_points(25)
 
