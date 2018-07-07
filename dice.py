@@ -35,6 +35,7 @@ def main():
     while play_again:
         # Obtain the Player guess
         guess = dice_game.get_user_guess()
+        user.add_guess(1)
 
         # Roll the dice
         dice_roll = dice_game.roll_dice()
@@ -51,7 +52,7 @@ def main():
             scoreboard.append_round(round_number,
                                     user.get_whole_name(),
                                     user.get_score(),
-                                    user.get_strikes())
+                                    user.get_guesses())
             round_number += 1
             user.reset_player()
             play_again = dice_game.play_again()

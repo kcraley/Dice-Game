@@ -16,6 +16,7 @@ class Player:
         self._last_name = last_name
         self._strikes = 0
         self._score = 0
+        self._total_guesses = 0
 
     def get_whole_name(self):
         """
@@ -91,6 +92,18 @@ class Player:
         if self.validate_integer(new_points):
             self._score -= new_points
 
+    def get_guesses(self):
+        """
+        Return the number of guesses the player has for a given round
+        """
+        return self._total_guesses
+
+    def add_guess(self, guess):
+        """
+        Add a guess for every dice roll
+        """
+        self._total_guesses += guess
+
     def validate_integer(self, new_points):
         """
         Ensures the amounts of points to be added or removed is a positive integer
@@ -107,3 +120,4 @@ class Player:
         """
         self._score = 0
         self._strikes = 0
+        self._total_guesses = 0
