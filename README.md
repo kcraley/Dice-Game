@@ -9,7 +9,7 @@ In this game, the user will guess a number from one to six.  A dice will roll an
 
 ### Rules
 
-You must guess what number the computer is going to roll.  If you guess correctly, you win the game.  Otherwise, if you guess incorrectly, a strike is given and you can continue to guess.  If you reach three strikes, the game is over.  Guessing correctly will remove up to two of your strikes.  Good luck!
+You must guess what number the computer is going to roll.  If you guess correctly, you win the the round and a strike is removed.  Otherwise, if you guess incorrectly, a strike is given and you can continue to guess.  If you reach three strikes, the game is over.  Guessing correctly will remove up to two of your strikes.  Good luck!
 
 ## Playing Dice Game
 
