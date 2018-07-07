@@ -14,9 +14,13 @@ def main():
     """
     from player import Player
     from game import Game
+    from scoreboard import Scoreboard
 
     # Instantiate game
     dice_game = Game()
+
+    # Instantiate scoreboard
+    scoreboard = Scoreboard()
 
     # Get Player's name and instantiate
     first_name, last_name = dice_game.prompt_user_name()
@@ -26,6 +30,7 @@ def main():
     dice_game.welcome_prompt(user.get_whole_name())
 
     # Main game loop
+    round_number = 1
     play_again = True
     while play_again:
         # Obtain the Player guess
@@ -39,11 +44,19 @@ def main():
             user.add_strikes(1)
         elif guess == dice_roll:
             user.remove_strikes(1)
+            user.add_points(25)
 
         # Play again if the Player gets 3 or more strikes?
         if user.get_strikes() >= 3:
+            scoreboard.append_round(round_number,
+                                    user.get_whole_name(),
+                                    user.get_score(),
+                                    user.get_strikes())
+            round_number += 1
             user.reset_player()
             play_again = dice_game.play_again()
+
+    scoreboard.print_scoreboard()
 
 if __name__ == '__main__':
     main()
