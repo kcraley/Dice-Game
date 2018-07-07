@@ -22,7 +22,7 @@ class Player:
         """
         Return first and last name concatinated
         """
-        return self.get_first_name() + ' ' + self.get_last_name()
+        return (self.get_first_name() + ' ' + self.get_last_name()).title
 
     def get_first_name(self):
         """
