@@ -41,6 +41,6 @@ class Scoreboard:
         print "************"
         for game_round in scoreboard:
             print "Round: " + str(game_round['Round']).rjust(1),
-            print "Score: " + str(game_round['Score']).rjust(2),
-            print "Total Guesses: " + str(game_round['Total Strikes']).rjust(1),
+            print "Score: " + str(game_round['Score']).rjust(3),
+            print "Total Guesses: " + str(game_round['Total Strikes']).rjust(2),
             print "Name: " + str(game_round['Player Name']).rjust(1)
